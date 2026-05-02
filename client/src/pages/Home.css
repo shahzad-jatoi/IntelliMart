@@ -1,0 +1,49 @@
+.home-page { overflow-x: hidden; }
+
+/* Hero */
+.hero { position: relative; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 6rem 1.5rem; }
+.hero-grid-bg { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(17,20,23,0.4), rgba(17,20,23,0.9), var(--bg-primary)); z-index: 1; }
+.hero-content { position: relative; z-index: 10; max-width: 900px; }
+.hero-badge { display: inline-block; padding: 0.25rem 0.75rem; background: rgba(252,213,53,0.1); border: 1px solid rgba(252,213,53,0.2); color: var(--accent); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 2px; margin-bottom: 1.5rem; }
+.hero-title { font-size: 3rem; font-weight: 900; color: #fff; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.2rem; }
+@media (min-width: 768px) { .hero-title { font-size: 4.5rem; } }
+.hero-subtitle { color: var(--text-secondary); font-size: 1.1rem; max-width: 640px; margin: 0 auto 2rem; line-height: 1.6; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.btn-primary-glow { background: var(--accent); color: var(--accent-bg); padding: 0.85rem 2rem; font-size: 0.95rem; font-weight: 700; border-radius: 4px; display: inline-flex; align-items: center; gap: 0.5rem; transition: transform 0.2s; }
+.btn-primary-glow:hover { transform: scale(1.02); color: var(--accent-bg); }
+.btn-outline-glow { border: 1px solid var(--text-muted); color: #fff; padding: 0.85rem 2rem; font-size: 0.95rem; font-weight: 700; border-radius: 4px; transition: all 0.2s; }
+.btn-outline-glow:hover { background: rgba(255,255,255,0.05); color: #fff; }
+
+/* Section */
+.home-section { padding: 5rem 0; }
+.products-bg { background: var(--bg-secondary); }
+.section-heading { font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 2rem; }
+.section-heading.text-center { text-align: center; }
+.section-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.section-action { text-align: right; margin-top: 1.5rem; }
+.action-link { color: var(--accent); font-size: 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.3rem; }
+.action-link:hover { text-decoration: underline; color: var(--accent); }
+
+/* Category Cards - improved */
+.cat-card { display: flex; flex-direction: column; background: var(--surface-low); border: 1px solid var(--border); padding: 2rem; position: relative; overflow: hidden; text-decoration: none !important; transition: border-color 0.3s; }
+.cat-card:hover { border-color: var(--accent); }
+.cat-letter-bg { position: absolute; right: -8px; bottom: -12px; font-size: 7rem; font-weight: 900; color: var(--text-primary); opacity: 0.03; transition: opacity 0.3s; pointer-events: none; line-height: 1; }
+.cat-card:hover .cat-letter-bg { opacity: 0.08; }
+.cat-icon-letter { width: 48px; height: 48px; background: var(--accent); color: var(--accent-bg); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; border-radius: 2px; margin-bottom: 1.2rem; }
+.cat-card h4 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; text-transform: capitalize; }
+.cat-count { color: var(--text-secondary); font-family: var(--font-data); font-size: 0.82rem; }
+
+/* How It Works - horizontal flow, names only */
+.how-it-works { border-top: 1px solid var(--border); }
+.hiw-flow { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; }
+.hiw-step { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; position: relative; padding: 0 2.5rem; }
+.hiw-number { font-family: var(--font-data); font-size: 2.5rem; font-weight: 600; color: var(--accent); opacity: 0.2; }
+.hiw-icon { font-size: 2rem; color: var(--accent); }
+.hiw-step h4 { color: #fff; font-size: 0.95rem; font-weight: 700; text-align: center; }
+.hiw-connector { position: absolute; right: -10px; top: 50%; width: 20px; height: 2px; background: var(--border); }
+
+@media (max-width: 768px) {
+  .hiw-flow { flex-direction: column; gap: 1.5rem; }
+  .hiw-connector { display: none; }
+  .section-header-row { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}

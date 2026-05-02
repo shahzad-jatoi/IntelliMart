@@ -1,0 +1,112 @@
+.intellimart-nav {
+  background: rgba(17, 20, 23, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none !important;
+}
+
+.brand-icon {
+  background: var(--accent);
+  color: var(--accent-bg);
+  font-weight: 900;
+  font-size: 0.85rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.015em;
+}
+
+.brand-accent { color: var(--accent); }
+
+.intellimart-nav .nav-link {
+  color: var(--text-primary) !important;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem !important;
+  transition: color 0.2s;
+}
+
+.intellimart-nav .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.nav-dashboard {
+  color: var(--accent) !important;
+  font-weight: 600 !important;
+}
+
+.nav-user {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--accent-bg) !important;
+  font-weight: 700 !important;
+  border-radius: 4px;
+  padding: 0.4rem 1rem !important;
+  margin-left: 0.5rem;
+}
+
+.nav-cta:hover {
+  filter: brightness(1.1);
+  color: var(--accent-bg) !important;
+}
+
+.dropdown-menu-dark {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px;
+}
+
+.dropdown-menu-dark .dropdown-item {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+  background: var(--surface-high);
+  color: var(--accent);
+}
+
+.nav-cart-link {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+}
+
+.nav-cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--accent);
+  color: var(--accent-bg);
+  font-size: 0.55rem;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

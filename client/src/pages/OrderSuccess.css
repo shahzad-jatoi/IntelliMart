@@ -1,0 +1,16 @@
+.order-success { padding: 4rem 0; min-height: 60vh; display: flex; align-items: center; justify-content: center; }
+.success-card { background: var(--bg-card); border: 1px solid var(--border); padding: 2.5rem; max-width: 520px; width: 100%; text-align: center; }
+.success-icon { width: 64px; height: 64px; background: var(--success-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
+.success-icon svg { width: 32px; height: 32px; color: var(--success); }
+.success-card h1 { color: #fff; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem; }
+.success-card .success-subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+.success-details { text-align: left; background: var(--surface-low); border: 1px solid var(--border); padding: 1.2rem; margin-bottom: 1.5rem; }
+.success-detail-row { display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+.success-detail-row:last-child { border-bottom: none; }
+.success-detail-label { color: var(--text-muted); font-size: 0.82rem; }
+.success-detail-value { color: var(--text-primary); font-size: 0.82rem; font-weight: 600; font-family: var(--font-data); }
+.success-actions { display: flex; gap: 0.8rem; justify-content: center; }
+.btn-success-primary { background: var(--accent); color: var(--accent-bg); padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 700; font-size: 0.85rem; text-decoration: none !important; }
+.btn-success-primary:hover { filter: brightness(1.1); color: var(--accent-bg); }
+.btn-success-outline { border: 1px solid var(--border); color: var(--text-secondary); padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 600; font-size: 0.85rem; text-decoration: none !important; }
+.btn-success-outline:hover { border-color: var(--accent); color: var(--accent); }

@@ -1,0 +1,49 @@
+.seller-dashboard { padding: 2rem 0; min-height: 80vh; }
+.dashboard-header { margin-bottom: 2rem; }
+.dashboard-header h1 { color: #fff; font-size: 1.6rem; font-weight: 700; }
+.dashboard-header p { color: var(--text-muted); font-size: 0.85rem; }
+
+/* Upload Card */
+.upload-card { background: var(--bg-card); border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1.5rem; }
+.upload-card h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+.upload-card .material-symbols-outlined { color: var(--accent); }
+.upload-card .form-group { margin-bottom: 0.8rem; }
+.upload-card label { display: block; color: var(--text-secondary); font-size: 0.78rem; font-weight: 600; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.03em; }
+.upload-card .form-input { width: 100%; padding: 0.6rem 0.8rem; background: var(--surface-low); border: 1px solid var(--border); border-radius: 4px; color: var(--text-primary); font-size: 0.85rem; font-family: 'Inter', sans-serif; }
+.upload-card .form-input:focus { outline: none; border-color: var(--accent); }
+.upload-card textarea.form-input { min-height: 100px; resize: vertical; }
+
+/* Upload & Classify button */
+.btn-upload { display: inline-flex; align-items: center; gap: 0.5rem; width: 100%; justify-content: center; padding: 0.75rem 1.5rem; background: var(--accent); color: var(--accent-bg); border: none; border-radius: 4px; font-size: 0.95rem; font-weight: 700; cursor: pointer; margin-top: 0.5rem; transition: all 0.2s; }
+.btn-upload:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-1px); }
+.btn-upload:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.btn-upload .material-symbols-outlined { font-size: 20px; }
+
+/* Result card */
+.result-card { background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid var(--success); padding: 1.5rem; margin-bottom: 1.5rem; }
+.result-card h3 { color: var(--success); font-size: 1rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.4rem; }
+.result-category, .result-confidence, .result-model { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+.result-label { color: var(--text-muted); font-size: 0.78rem; font-weight: 600; min-width: 90px; text-transform: uppercase; letter-spacing: 0.03em; }
+.result-value { color: var(--accent); font-weight: 700; font-size: 0.9rem; text-transform: capitalize; }
+.result-bar { flex: 1; height: 6px; background: var(--surface-variant); border-radius: 3px; overflow: hidden; max-width: 180px; }
+.result-fill { height: 100%; border-radius: 3px; transition: width 0.8s ease; }
+.result-pct { font-family: var(--font-data); font-weight: 700; font-size: 0.85rem; min-width: 40px; }
+.model-tag { background: var(--surface-high); color: var(--text-secondary); padding: 0.15rem 0.5rem; font-size: 0.72rem; text-transform: capitalize; font-family: var(--font-data); }
+.result-alternatives { margin-top: 0.5rem; }
+.alt-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.3rem; }
+.alt-tag { background: var(--surface-low); border: 1px solid var(--border); color: var(--text-secondary); padding: 0.2rem 0.5rem; font-size: 0.72rem; text-transform: capitalize; }
+
+/* Products table */
+.my-products-card { background: var(--bg-card); border: 1px solid var(--border); padding: 1.5rem; }
+.my-products-card h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; }
+.products-table-container { overflow-x: auto; }
+.products-table { width: 100%; border-collapse: collapse; }
+.products-table th { background: var(--surface-high); color: var(--text-secondary); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid var(--border); }
+.products-table td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--border); font-size: 0.82rem; color: var(--text-primary); vertical-align: middle; }
+.products-table tr:hover { background: var(--surface-low); }
+.table-title a { color: var(--text-primary); font-weight: 500; }
+.table-title a:hover { color: var(--accent); }
+.table-badge { background: rgba(252,213,53,0.08); color: var(--accent); padding: 0.15rem 0.5rem; font-size: 0.72rem; font-weight: 600; text-transform: capitalize; }
+.table-confidence { font-family: var(--font-data); font-weight: 600; }
+
+.empty-state { text-align: center; padding: 3rem; color: var(--text-muted); }

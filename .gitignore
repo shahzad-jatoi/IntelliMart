@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment variables
+.env
+server/.env
+
+# Dataset (too large for GitHub - 57MB+)
+dataset/
+
+# ML model artifacts (binary files, can be regenerated)
+model/*.joblib
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+model/__pycache__/
+model/.pytest_cache/
+model/app/__pycache__/
+
+# Viva / personal study files (not part of the codebase)
+model/VIVA_COMPLETE_GUIDE.md
+model/viva_script.txt
+model/handoff.md
+DEMO_CREDENTIALS.md
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Build output
+client/dist/
+client/build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Misc
+.gemini/
+.antigravityignore

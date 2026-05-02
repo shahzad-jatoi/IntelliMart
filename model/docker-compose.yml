@@ -1,0 +1,8 @@
+services:
+  product-classifier-api:
+    build: .
+    container_name: product-classifier-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
