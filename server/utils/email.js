@@ -4,10 +4,16 @@ const nodemailer = require('nodemailer');
 // For production, use a proper email service (SendGrid, Mailgun, etc.)
 const createTransporter = () => {
   return nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    family: 4,  // Force IPv4 — Render can't route outbound IPv6
     auth: {
       user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS, // Gmail App Password (NOT regular password)
+      pass: process.env.EMAIL_PASS,
+    },
+    tls: {
+      rejectUnauthorized: false,
     },
   });
 };
