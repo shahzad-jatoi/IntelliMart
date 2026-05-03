@@ -60,7 +60,12 @@ const sendOtpEmail = async (to, otp) => {
     console.log(`[OTP] Email sent to ${to}`);
     return true;
   } catch (error) {
-    // If email fails, log OTP to console so registration can still proceed
+    // Log the ACTUAL error so we can debug on Render
+    console.error(`[OTP] EMAIL FAILED: ${error.message}`);
+    console.error(`[OTP] Error code: ${error.code || 'none'}`);
+    console.error(`[OTP] EMAIL_USER set: ${!!process.env.EMAIL_USER}`);
+    console.error(`[OTP] EMAIL_PASS set: ${!!process.env.EMAIL_PASS} (length: ${(process.env.EMAIL_PASS || '').length})`);
+    // Fallback: show OTP in console so registration can still proceed
     console.log(`\n========================================`);
     console.log(`[OTP] Email delivery failed - showing OTP in console`);
     console.log(`[OTP] Email: ${to}`);
