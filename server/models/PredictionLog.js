@@ -22,7 +22,7 @@ const predictionLogSchema = new mongoose.Schema({
   },
   modelUsed: {
     type: String,
-    enum: ['logistic_regression', 'naive_bayes_fallback', 'ensemble_blend'],
+    enum: ['logistic_regression', 'naive_bayes_fallback', 'ensemble_blend', 'manual', 'seeded'],
     required: true,
   },
   processingTimeMs: {
