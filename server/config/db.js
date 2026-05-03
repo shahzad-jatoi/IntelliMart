@@ -1,18 +1,12 @@
 const mongoose = require('mongoose');
-const { MongoMemoryServer } = require('mongodb-memory-server');
-
-let mongoServer = null;
 
 const connectDB = async () => {
   try {
-    let uri = process.env.MONGO_URI;
+    const uri = process.env.MONGO_URI;
 
-    // If no valid MongoDB Atlas URI, use in-memory MongoDB
-    if (!uri || uri.includes('<username>') || uri.includes('<password>')) {
-      console.log('⚡ No MongoDB Atlas URI found. Starting in-memory MongoDB...');
-      mongoServer = await MongoMemoryServer.create();
-      uri = mongoServer.getUri();
-      console.log(`📦 In-memory MongoDB running at: ${uri}`);
+    if (!uri) {
+      console.error('❌ MONGO_URI environment variable is not set');
+      process.exit(1);
     }
 
     const conn = await mongoose.connect(uri);
@@ -27,9 +21,6 @@ const connectDB = async () => {
 // Graceful shutdown
 const disconnectDB = async () => {
   await mongoose.disconnect();
-  if (mongoServer) {
-    await mongoServer.stop();
-  }
 };
 
 module.exports = { connectDB, disconnectDB };

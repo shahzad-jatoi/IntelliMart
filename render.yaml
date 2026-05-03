@@ -1,0 +1,37 @@
+# Render Blueprint — deploy both services at once
+# https://render.com/docs/blueprint-spec
+
+services:
+  # Express.js Backend
+  - type: web
+    name: intellimart-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false  # Set manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false
+      - key: MODEL_SERVICE_URL
+        sync: false  # Set to ML service URL after it deploys
+      - key: FRONTEND_URL
+        sync: false  # Set to Vercel URL
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+
+  # FastAPI ML Service
+  - type: web
+    name: intellimart-ml
+    runtime: python
+    rootDir: model
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13"

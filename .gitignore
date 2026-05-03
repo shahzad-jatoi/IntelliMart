@@ -6,12 +6,13 @@ server/node_modules/
 # Environment variables
 .env
 server/.env
+client/.env
 
 # Dataset (too large for GitHub - 57MB+)
 dataset/
 
-# ML model artifacts (binary files, can be regenerated)
-model/*.joblib
+# ML model artifacts — KEPT in repo (needed for Render deployment)
+# model/*.joblib
 
 # Python caches
 __pycache__/
